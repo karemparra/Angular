@@ -1,8 +1,25 @@
-{{nombre}}
+<!--
+  {{nombre}}
 <div>
   <p *ngFor= "let nom of nombres">
     {{nom}}
   </p>
+  <p *ngFor = "let user of listUsers">
+    {{user.idUsuario}} -- {{user.nombre}} -- {{user.edad}}
+  </p>
 </div>
 
+<img [src]="imagenURL" alt="">
+<button [disabled] ="activedButton" (click)="desactivarBoton(true)">Property Bindig</button>
+<button [class.activo] ="activedButton" (click)="desactivarBoton(true)">Property Bindig</button>
+<button (mouseover)="mostrarEvento($event)">Boton Evento</button>
+<button (keyup.enter)="mostrarEvento($event)">Event filtering</button>
+-->
+<!--
+https://codingpotions.com/angular-comunicacion-componentes
+https://angular.io/guide/router-tutorial
+https://angular.io/api/forms/NgModel#description
+https://primefaces.org/primeng/showcase/#/inputtext
+-->
 <router-outlet></router-outlet>
+<p>hola!</p>
