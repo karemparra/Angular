@@ -5,8 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PadreComponent } from './padre/padre.component';
 import { HijoComponent } from './hijo/hijo.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {InputTextModule} from 'primeng/inputtext';
+import { HttpClientModule} from '@angular/common/http';
+
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import {InputTextModule} from 'primeng/inputtext';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    InputTextModule
+    InputTextModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

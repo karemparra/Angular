@@ -2,3 +2,13 @@
 <app-hijo [recibido]="mensajeHijo"></app-hijo>
 
 <input [(ngModel)]="input">
+
+<form [formGroup]='formUsuario' (ngSubmit)='enviarDatos()'>
+    <input type="text" formControlName='nombre'>
+    <input type="text" formControlName='apellido'>
+    <input type="text" formControlName='telefono'>
+    <input type="text" formControlName='email
+    
+    '>
+    <button [disabled]="formUsuario.invalid">Enviar</button>
+</form>
