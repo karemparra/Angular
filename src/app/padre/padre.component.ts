@@ -2,6 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Usuario } from '../model/Usuario';
 import { PadreService } from '../services/padre.service';
+import {InputTextModule} from 'primeng/inputtext';
+import {CalendarModule} from 'primeng/calendar';
 
 @Component({
   selector: 'app-padre',
@@ -13,9 +15,11 @@ export class PadreComponent implements OnInit {
   constructor(private servicePadre: PadreService) { 
   }
 
-  mensajeHijo: Array<Usuario> = new Array<Usuario>();
+  mensaje: string = "Soy el padre";
   saludo: string | undefined;
   input: any;
+  value: Date | undefined;
+  
 
   formUsuario = new FormGroup({
     nombre: new FormControl('', [Validators.required, Validators.maxLength(5)]),
@@ -41,10 +45,10 @@ export class PadreComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.mensajeHijo = [
-      {idUsuario: 1, nombre: 'Karem', edad: 22, estado: true},
-      {idUsuario: 2, nombre: 'Giovanna', edad: 23, estado: true}
-    ]
+    // this.mensajeHijo = [
+    //   {idUsuario: 1, nombre: 'Karem', edad: 22, estado: true},
+    //   {idUsuario: 2, nombre: 'Giovanna', edad: 23, estado: true}
+    // ]
     
   }
 
@@ -52,5 +56,7 @@ export class PadreComponent implements OnInit {
     console.log($event);
     this.saludo = $event;
   }
+  
 
 }
+
